@@ -1,0 +1,587 @@
+{
+  "dbo.Bien": [
+    {
+      "Idbien": 18,
+      "Tipo": 1,
+      "Direccion": "Calle 11",
+      "Superficie": 120.5,
+      "Nomenclatura_catastral": "NOM011",
+      "Marca": null,
+      "Modelo": null,
+      "Anio": null,
+      "Patente": null
+    },
+    {
+      "Idbien": 19,
+      "Tipo": 1,
+      "Direccion": "Calle 12",
+      "Superficie": 130.0,
+      "Nomenclatura_catastral": "NOM012",
+      "Marca": null,
+      "Modelo": null,
+      "Anio": null,
+      "Patente": null
+    },
+    {
+      "Idbien": 20,
+      "Tipo": 1,
+      "Direccion": "Calle 13",
+      "Superficie": 90.75,
+      "Nomenclatura_catastral": "NOM013",
+      "Marca": null,
+      "Modelo": null,
+      "Anio": null,
+      "Patente": null
+    },
+    {
+      "Idbien": 21,
+      "Tipo": 1,
+      "Direccion": "Calle 14",
+      "Superficie": 85.3,
+      "Nomenclatura_catastral": "NOM014",
+      "Marca": null,
+      "Modelo": null,
+      "Anio": null,
+      "Patente": null
+    },
+    {
+      "Idbien": 22,
+      "Tipo": 1,
+      "Direccion": "Calle 15",
+      "Superficie": 150.0,
+      "Nomenclatura_catastral": "NOM015",
+      "Marca": null,
+      "Modelo": null,
+      "Anio": null,
+      "Patente": null
+    },
+    {
+      "Idbien": 23,
+      "Tipo": 2,
+      "Direccion": null,
+      "Superficie": null,
+      "Nomenclatura_catastral": null,
+      "Marca": "Toyota",
+      "Modelo": "Camry",
+      "Anio": 2021,
+      "Patente": "AAA111"
+    },
+    {
+      "Idbien": 24,
+      "Tipo": 2,
+      "Direccion": null,
+      "Superficie": null,
+      "Nomenclatura_catastral": null,
+      "Marca": "Honda",
+      "Modelo": "Accord",
+      "Anio": 2020,
+      "Patente": "BBB222"
+    },
+    {
+      "Idbien": 25,
+      "Tipo": 2,
+      "Direccion": null,
+      "Superficie": null,
+      "Nomenclatura_catastral": null,
+      "Marca": "Ford",
+      "Modelo": "Mustang",
+      "Anio": 2019,
+      "Patente": "CCC333"
+    },
+    {
+      "Idbien": 26,
+      "Tipo": 2,
+      "Direccion": null,
+      "Superficie": null,
+      "Nomenclatura_catastral": null,
+      "Marca": "Chevrolet",
+      "Modelo": "Malibu",
+      "Anio": 2018,
+      "Patente": "DDD444"
+    },
+    {
+      "Idbien": 27,
+      "Tipo": 2,
+      "Direccion": null,
+      "Superficie": null,
+      "Nomenclatura_catastral": null,
+      "Marca": "Nissan",
+      "Modelo": "Altima",
+      "Anio": 2017,
+      "Patente": "EEE555"
+    }
+  ],
+  "dbo.BienesPropietarios": [
+    {
+      "Id": 1,
+      "Idbien": 18,
+      "Id_Propietario": 1,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 2,
+      "Idbien": 19,
+      "Id_Propietario": 2,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 3,
+      "Idbien": 20,
+      "Id_Propietario": 3,
+      "Porcentaje_propiedad": 50.0
+    },
+    {
+      "Id": 4,
+      "Idbien": 20,
+      "Id_Propietario": 4,
+      "Porcentaje_propiedad": 50.0
+    },
+    {
+      "Id": 5,
+      "Idbien": 21,
+      "Id_Propietario": 5,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 6,
+      "Idbien": 22,
+      "Id_Propietario": 6,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 7,
+      "Idbien": 22,
+      "Id_Propietario": 7,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 8,
+      "Idbien": 24,
+      "Id_Propietario": 8,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 9,
+      "Idbien": 25,
+      "Id_Propietario": 9,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 10,
+      "Idbien": 26,
+      "Id_Propietario": 10,
+      "Porcentaje_propiedad": 100.0
+    },
+    {
+      "Id": 11,
+      "Idbien": 27,
+      "Id_Propietario": 11,
+      "Porcentaje_propiedad": 100.0
+    }
+  ],
+  "dbo.CDCuotaestado": [
+    { "Id_estado": 1, "Descripcion": "Pagado" },
+    { "Id_estado": 2, "Descripcion": "Pendiente" },
+    { "Id_estado": 3, "Descripcion": "En Proceso" }
+  ],
+  "dbo.CDest_civ": [
+    { "Codigo": 1, "Descripcion": "Soltero" },
+    { "Codigo": 2, "Descripcion": "Casado" },
+    { "Codigo": 3, "Descripcion": "Separado de Hecho" },
+    { "Codigo": 4, "Descripcion": "Unido de Hecho" },
+    { "Codigo": 5, "Descripcion": "Separado Legalmente" },
+    { "Codigo": 6, "Descripcion": "Viudo" },
+    { "Codigo": 7, "Descripcion": "Divorciado" }
+  ],
+  "dbo.CDtipoBien": [
+    { "Cod_tipo": 1, "Descripcion": "Inmueble" },
+    { "Cod_tipo": 2, "Descripcion": "Automotor" }
+  ],
+  "dbo.Cuota": [
+    {
+      "Idcuota": 2,
+      "Id_bien": 18,
+      "Monto": 1000.0,
+      "Fecha_vencimiento": "10/1/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 3,
+      "Id_bien": 19,
+      "Monto": 1500.5,
+      "Fecha_vencimiento": "15/2/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 4,
+      "Id_bien": 20,
+      "Monto": 1200.75,
+      "Fecha_vencimiento": "20/3/2023",
+      "CodEstado": 2
+    },
+    {
+      "Idcuota": 5,
+      "Id_bien": 21,
+      "Monto": 1800.0,
+      "Fecha_vencimiento": "25/4/2023",
+      "CodEstado": 2
+    },
+    {
+      "Idcuota": 6,
+      "Id_bien": 22,
+      "Monto": 1300.25,
+      "Fecha_vencimiento": "30/5/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 7,
+      "Id_bien": 23,
+      "Monto": 1100.5,
+      "Fecha_vencimiento": "10/6/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 8,
+      "Id_bien": 24,
+      "Monto": 1600.75,
+      "Fecha_vencimiento": "15/7/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 9,
+      "Id_bien": 25,
+      "Monto": 1400.0,
+      "Fecha_vencimiento": "20/8/2023",
+      "CodEstado": 1
+    },
+    {
+      "Idcuota": 10,
+      "Id_bien": 26,
+      "Monto": 1700.25,
+      "Fecha_vencimiento": "25/9/2023",
+      "CodEstado": 2
+    },
+    {
+      "Idcuota": 11,
+      "Id_bien": 27,
+      "Monto": 1900.5,
+      "Fecha_vencimiento": "30/10/2023",
+      "CodEstado": 1
+    }
+  ],
+  "dbo.Pagos": [
+    {
+      "Id": 3,
+      "Id_cuota": 2,
+      "Fecha_pago": "11/1/2023",
+      "Monto_pagado": 1000.0
+    },
+    {
+      "Id": 4,
+      "Id_cuota": 3,
+      "Fecha_pago": "16/2/2023",
+      "Monto_pagado": 1500.5
+    },
+    {
+      "Id": 5,
+      "Id_cuota": 4,
+      "Fecha_pago": "21/3/2023",
+      "Monto_pagado": 1200.75
+    },
+    {
+      "Id": 6,
+      "Id_cuota": 5,
+      "Fecha_pago": "26/4/2023",
+      "Monto_pagado": 1800.0
+    },
+    {
+      "Id": 7,
+      "Id_cuota": 6,
+      "Fecha_pago": "31/5/2023",
+      "Monto_pagado": 1300.25
+    },
+    {
+      "Id": 8,
+      "Id_cuota": 7,
+      "Fecha_pago": "11/6/2023",
+      "Monto_pagado": 1100.5
+    },
+    {
+      "Id": 9,
+      "Id_cuota": 8,
+      "Fecha_pago": "16/7/2023",
+      "Monto_pagado": 1600.75
+    },
+    {
+      "Id": 10,
+      "Id_cuota": 9,
+      "Fecha_pago": "21/8/2023",
+      "Monto_pagado": 1400.0
+    },
+    {
+      "Id": 11,
+      "Id_cuota": 10,
+      "Fecha_pago": "26/9/2023",
+      "Monto_pagado": 1700.25
+    },
+    {
+      "Id": 12,
+      "Id_cuota": 11,
+      "Fecha_pago": "31/10/2023",
+      "Monto_pagado": 1900.5
+    }
+  ],
+  "dbo.PagosPropietarios": [
+    {
+      "Id": 5,
+      "Id_pago": 3,
+      "Id_propietario": 1,
+      "Id_bien": 18,
+      "MontoPagado": 1500.0
+    }
+  ],
+
+  "dbo.Propietario": [
+    {
+      "IDPropietario": 1,
+      "ApeyNombre": "Juan Pérez",
+      "Numdoc": 12345678,
+      "Direccion": "Calle Falsa 123",
+      "Fechanac": "1/5/1980",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "0B 14 D5 01 A5 94 44 2A 01 C6 85 95 41 BC B3 E8 16 4D 18 3D 32 93 7B 85 18 35 44 2F 69 D5 C9 4E",
+      "email": "juan.perez@example.com",
+      "password": "juan1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 2,
+      "ApeyNombre": "María García",
+      "Numdoc": 23456789,
+      "Direccion": "Av. Siempre Viva 742",
+      "Fechanac": "15/3/1975",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "6C F6 15 D5 BC AA C7 78 35 2A 8F 1F 33 60 D2 3F 02 F3 4E C1 82 E2 59 89 7F D6 CE 48 5D 78 70 D4",
+      "email": "maria.garcia@example.com",
+      "password": "maria1234",
+      "TipoPersona": 1
+    },
+    {
+      "IDPropietario": 3,
+      "ApeyNombre": "Carlos López",
+      "Numdoc": 34567890,
+      "Direccion": "Boulevard de los Sueños 456",
+      "Fechanac": "22/7/1988",
+      "Cod_estado_Civil": null,
+      "Clavedeacceso": "59 06 AC 36 1A 13 7E 2D 28 64 65 CD 65 88 EB B5 AC 3F 5A E9 55 00 11 00 BC 41 57 7C 3D 75 17 64",
+      "email": "carlos.lopez@example.com",
+      "password": "carlos1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 4,
+      "ApeyNombre": "Ana Martínez",
+      "Numdoc": 11254589,
+      "Direccion": "Calle del Sol 789",
+      "Fechanac": "30/12/1990",
+      "Cod_estado_Civil": 2,
+      "Clavedeacceso": "B9 78 73 A4 0F 73 AB ED D8 D6 85 A7 CD 5E 5F 85 E4 A9 CF B8 3E AC 26 88 66 40 A0 81 38 50 12 2B",
+      "email": "ana.martinez@example.com",
+      "password": "ana1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 5,
+      "ApeyNombre": "Luis González",
+      "Numdoc": 11245787,
+      "Direccion": "Avenida Libertador 101",
+      "Fechanac": "20/1/1982",
+      "Cod_estado_Civil": 4,
+      "Clavedeacceso": "8B 2C 86 EA 9C F2 EA 4E B5 17 FD 1E 06 B7 4F 39 9E 7F EC 0F EF 92 E3 B4 82 A6 CF 2E 2B 09 20 23",
+      "email": "luis.gonzalez@example.com",
+      "password": "luis1234",
+      "TipoPersona": 1
+    },
+    {
+      "IDPropietario": 6,
+      "ApeyNombre": "Marta Rodríguez",
+      "Numdoc": 30654777,
+      "Direccion": "Calle de la Luna 202",
+      "Fechanac": "11/11/1979",
+      "Cod_estado_Civil": 4,
+      "Clavedeacceso": "59 8A 1A 40 0C 1D FD F3 69 74 E6 9D 7E 1B C9 85 93 F2 E1 50 15 EE D8 E9 B7 E4 7A 83 B3 16 93 D5",
+      "email": "marta.rodriguez@example.com",
+      "password": "marta1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 7,
+      "ApeyNombre": "Jorge Fernández",
+      "Numdoc": 12578987,
+      "Direccion": "Camino de los Vientos 303",
+      "Fechanac": "25/6/1985",
+      "Cod_estado_Civil": 2,
+      "Clavedeacceso": "58 60 83 6E 8F 13 FC 98 37 53 9A 59 7D 40 86 BF C0 29 9E 54 AD 92 14 8D 54 53 8B 5C 3F EE FB 7C",
+      "email": "jorge.fernandez@example.com",
+      "password": "jorge1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 8,
+      "ApeyNombre": "Laura Sánchez",
+      "Numdoc": 6878960,
+      "Direccion": "Calle del Mar 404",
+      "Fechanac": "4/4/1992",
+      "Cod_estado_Civil": 2,
+      "Clavedeacceso": "57 F3 EB AB 63 F1 56 FD 8F 77 6B A6 45 A5 5D 96 36 0A 15 EE FF C8 B0 E4 AF E4 C0 5F A8 82 19 AA",
+      "email": "laura.sanchez@example.com",
+      "password": "laura1234",
+      "TipoPersona": 1
+    },
+    {
+      "IDPropietario": 9,
+      "ApeyNombre": "Pedro Ramírez",
+      "Numdoc": 32589777,
+      "Direccion": "Avenida de los Pinos 505",
+      "Fechanac": "9/9/1978",
+      "Cod_estado_Civil": 6,
+      "Clavedeacceso": "93 23 DD 67 86 EB CB F3 AC 87 35 7C C7 8B A1 AB FD A6 CF 5E 55 CD 01 09 7B 90 D4 A2 86 CA C9 0E",
+      "email": "pedro.ramirez@example.com",
+      "password": "pedro1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 10,
+      "ApeyNombre": "Elena Torres",
+      "Numdoc": 12345679,
+      "Direccion": "Boulevard de la Esperanza 606",
+      "Fechanac": "8/8/1995",
+      "Cod_estado_Civil": null,
+      "Clavedeacceso": "AA 4A 9E A0 3F CA C1 5B 5F C6 3C 94 9A C3 4E 7B 0F D1 79 06 71 6A C3 B8 E5 8C 59 9C DC 5A 52 F0",
+      "email": "elena.torres@example.com",
+      "password": "elena1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 11,
+      "ApeyNombre": "Roberto Álvarez",
+      "Numdoc": 23456780,
+      "Direccion": "Calle de los Sueños 707",
+      "Fechanac": "14/2/1983",
+      "Cod_estado_Civil": 7,
+      "Clavedeacceso": "53 D4 53 B0 C0 8B 6B 38 AE 91 51 5D C8 8D 25 FB EC DD 1D 60 01 F0 22 41 96 29 DF 84 4F 8B A4 33",
+      "email": "roberto.alvarez@example.com",
+      "password": "roberto1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 12,
+      "ApeyNombre": "Gloria Mendoza",
+      "Numdoc": 34567891,
+      "Direccion": "Avenida de los Lagartos 808",
+      "Fechanac": "3/3/1998",
+      "Cod_estado_Civil": 4,
+      "Clavedeacceso": "A7 50 6B 15 99 7B 31 D6 9E 6D E1 4E 2D 36 24 89 02 39 6F 41 26 02 18 53 C2 70 FA 3A 03 9C D2 DF E1 10",
+      "email": "gloria.mendoza@example.com",
+      "password": "gloria1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 13,
+      "ApeyNombre": "Fernando Romero",
+      "Numdoc": 45678902,
+      "Direccion": "Calle del Amor 909",
+      "Fechanac": "7/7/1991",
+      "Cod_estado_Civil": 2,
+      "Clavedeacceso": "48 CA AF B6 85 83 93 6A FD 0D 78 A7 BF D7 04 6D 24 92 FA D9 4F 3C 48 59 15 F7 4B B6 01 28 62 0D",
+      "email": "fernando.romero@example.com",
+      "password": "fernando1234",
+      "TipoPersona": 1
+    },
+    {
+      "IDPropietario": 14,
+      "ApeyNombre": "Silvia Ortega",
+      "Numdoc": 56789013,
+      "Direccion": "Camino del Sol 111",
+      "Fechanac": "23/3/1989",
+      "Cod_estado_Civil": 6,
+      "Clavedeacceso": "C6 86 3E 1D B9 B3 96 ED 31 A3 69 88 63 95 13 A1 C7 3A 06 5F AB 83 68 1F 4B 77 AD B6 48 FA C3 D6",
+      "email": "silvia.ortega@example.com",
+      "password": "silvia1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 15,
+      "ApeyNombre": "Diego Silva",
+      "Numdoc": 17890124,
+      "Direccion": "Avenida de las Flores 222",
+      "Fechanac": "30/11/1987",
+      "Cod_estado_Civil": 2,
+      "Clavedeacceso": "C6 3C 2D 34 EB E8 40 32 AD 47 B8 7A F1 94 FE DD 17 DA CF 82 22 B2 EA 7F 4E BF EE 3D D6 DB 2D FB",
+      "email": "diego.silva@example.com",
+      "password": "diego1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 16,
+      "ApeyNombre": "Patricia Ruiz",
+      "Numdoc": 18901235,
+      "Direccion": "Calle del Río 333",
+      "Fechanac": "19/5/1993",
+      "Cod_estado_Civil": 3,
+      "Clavedeacceso": "17 A3 37 99 84 B5 60 DC 31 1B B9 21 B7 A4 6B 28 AA 5C B4 95 66 73 82 F8 87 A4 4A 7F DB CA 7A 7A",
+      "email": "patricia.ruiz@example.com",
+      "password": "patricia1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 17,
+      "ApeyNombre": "Héctor Herrera",
+      "Numdoc": 32859745,
+      "Direccion": "Boulevard del Bosque 444",
+      "Fechanac": "16/4/1977",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "69 BF B9 18 DE 05 14 5F BA 9D CE E9 68 8D FB 23 F6 11 58 45 88 5E 48 FA 39 94 5E EB B9 9D 85 27",
+      "email": "hector.herrera@example.com",
+      "password": "hector1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 18,
+      "ApeyNombre": "Isabel Castro",
+      "Numdoc": 6547587,
+      "Direccion": "Calle de los Andes 555",
+      "Fechanac": "25/9/1984",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "D2 04 2D 75 A6 79 22 19 4C 04 5D A2 60 0E 1C 92 FF 6D 87 E8 FB 6E 02 08 60 66 65 F2 D1 DF A8 92",
+      "email": "isabel.castro@example.com",
+      "password": "isabel1234",
+      "TipoPersona": 2
+    },
+    {
+      "IDPropietario": 19,
+      "ApeyNombre": "Andrés Moreno",
+      "Numdoc": 12345670,
+      "Direccion": "Avenida del Valle 666",
+      "Fechanac": "5/12/1986",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "57 90 AC 3D 0B 8A E8 AF C7 2C 2C 6F B9 76 54 F2 B7 36 51 C3 28 DE 0A 3B 74 85 4A DE 56 2D D1 7A",
+      "email": "andres.moreno@example.com",
+      "password": "andres1234",
+      "TipoPersona": 1
+    },
+    {
+      "IDPropietario": 20,
+      "ApeyNombre": "Lucía Vega",
+      "Numdoc": 23456781,
+      "Direccion": "Camino de la Montaña 777",
+      "Fechanac": "15/8/1990",
+      "Cod_estado_Civil": 1,
+      "Clavedeacceso": "75 35 D8 F2 D8 C3 5D 95 89 95 61 0F 97 12 87 28 8A B5 E8 C8 2A 3C 4F DC 2B 6F B5 D7 57 A5 B9 F8",
+      "email": "lucia.vega@example.com",
+      "password": "lucia1234",
+      "TipoPersona": 2
+    }
+  ],
+  "dbo.sysdiagrams": []
+}

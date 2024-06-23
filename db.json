@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "password123",
+      "type": "Administrador",
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": "2",
+      "username": "jane_doe",
+      "password": "password456",
+      "type": "Administrador",
+      "email": "jane.doe@example.com"
+    },
+    {
+      "id": "361d",
+      "email": "josephgordon1@gmail.com",
+      "type": "Usuario",
+      "password": "joseph"
+    },
+    {
+      "id": "41c0",
+      "type": "Usuario",
+      "email": "josephgordon2@gmail.com",
+      "password": "password"
+    }
+  ]
+}
