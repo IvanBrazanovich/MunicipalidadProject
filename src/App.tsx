@@ -25,7 +25,13 @@ function App() {
   }
 
   return (
-    <div>{usuario.TipoPersona === 1 ? <Administrador /> : <Usuario />}</div>
+    <div>
+      {usuario.tipo === 1 ? (
+        <Administrador usuario={usuario} />
+      ) : (
+        <Usuario usuario={usuario} />
+      )}
+    </div>
   );
 }
 

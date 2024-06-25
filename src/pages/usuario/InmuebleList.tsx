@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Inmueble from "./Inmueble";
-// import inmueblesData from '../data/inmuebles.json';
 
-const InmuebleList = ({ setModalState }) => {
+const InmuebleList = () => {
   const [inmuebles, setInmuebles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,9 +19,8 @@ const InmuebleList = ({ setModalState }) => {
       }
       const data = await response.json();
       setInmuebles(data.$values);
-      console.log(data.$values);
-
       setLoading(false);
+      console.log(data.$values);
     } catch (error) {
       setError(error);
       setLoading(false);
@@ -42,11 +40,7 @@ const InmuebleList = ({ setModalState }) => {
       <h2 className="text-2xl font-bold mb-4">Listado de Inmuebles</h2>
       <ul>
         {inmuebles.map((inmueble, index) => (
-          <Inmueble
-            setModalState={setModalState}
-            key={index}
-            inmueble={inmueble}
-          />
+          <Inmueble key={index} inmueble={inmueble} />
         ))}
       </ul>
     </div>

@@ -59,7 +59,12 @@ export async function login({ email, password }) {
     const expires = new Date(Date.now() + 100 * 100000);
     const session = await encrypt({ usuario, expires });
 
-    cookies.set("session", session, { path: "/" });
+    cookies.set("session", session, {
+      path: "/",
+      sameSite: "none", // SameSite attribute set to None
+      secure: true, // Secure attribute required for SameSite=None
+      expires: expires, // Setting the expiration time
+    });
 
     return;
   } catch (error) {
@@ -70,16 +75,20 @@ export async function login({ email, password }) {
   // cookies().set("session", session, { expires, httpOnly: true });
 }
 
-export async function signUp({ email, password }) {
+export async function signUp({ email, password, nombreyApellido, tipo }) {
   // Verify credentials && get the user
-
   try {
     const response = await fetch("http://localhost:5123/api/propietarios", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ Email: email, Password: password }),
+      body: JSON.stringify({
+        Email: email,
+        Password: password,
+        ApeyNombre: nombreyApellido,
+        Tipo: tipo,
+      }),
       // Add other fields as needed (.g., email, etc.)
     });
 

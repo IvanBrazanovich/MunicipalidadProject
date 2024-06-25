@@ -2,12 +2,7 @@
 const API_URL = "http://localhost:3001";
 
 // Función para obtener todos los inmuebles
-export const fetchInmuebles = async () => {
-
-  
-
-
-};
+export const fetchInmuebles = async () => {};
 // Función para obtener propietarios de un inmueble
 export const fetchPropietarios = async (idBien) => {
   const response = await fetch(

@@ -12,18 +12,27 @@ const Inmueble = ({ inmueble, setModalState }) => {
       </p>
       <p className="mb-2">
         <span className="font-bold">Nomenclatura Catastral:</span>{" "}
-        {inmueble.nomenclatura_catastral}
+        {inmueble.nomenclatura_Catastral}
       </p>
       <p className="mb-2">
         <span className="font-bold">Cuotas Pagadas:</span>{" "}
-        {inmueble.cuotas_pagadas}
+        {inmueble.pagosHechos.$values.length}
       </p>
       <p className="mb-2">
         <span className="font-bold">Cuotas por Pagar:</span>{" "}
-        {inmueble.cuotas_por_pagar}
+        {inmueble.cuotas.$values.length - inmueble.pagosHechos.$values.length}
       </p>
+
       <p className="mb-2">
-        <span className="font-bold">Propietario:</span> {inmueble.propietario}
+        <span className="font-bold">Propietarios:</span>{" "}
+        {inmueble.propietarios.$values.map((propietario) => (
+          <span
+            key={propietario.$id}
+            className="ml-2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+          >
+            {propietario.apeyNombre}
+          </span>
+        ))}
       </p>
       <button
         onClick={() =>
