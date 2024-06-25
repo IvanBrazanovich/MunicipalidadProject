@@ -13,6 +13,44 @@ const Administrador = ({ usuario }) => {
   const handleSubmit = async (e, formData) => {
     e.preventDefault();
 
+    const {
+      idBien,
+      anio,
+      cuotas_pagadas,
+      cuotas_por_pagar,
+      marca,
+      modelo,
+      patente,
+      propietarios,
+    } = formData;
+
+    // Mapear los propietarios a un formato sin $id
+    const propietariosToSend = formData.propietarios.$values.map(
+      (propietario) => ({
+        apeyNombre: propietario.apeyNombre,
+        direccion: propietario.direccion,
+        email: propietario.email,
+        estadoCivil: propietario.estadoCivil,
+        fechanac: propietario.fechanac,
+        idPropietario: propietario.idPropietario,
+        numdoc: propietario.numdoc,
+        tipo: propietario.tipo,
+      })
+    );
+
+    // Añadir otros campos necesarios del propietario si los hay
+
+    const payload = {
+      idBien,
+      anio,
+      cuotas_pagadas,
+      cuotas_por_pagar,
+      marca,
+      modelo,
+      patente,
+      propietarios: propietariosToSend,
+    };
+
     try {
       const response = await fetch(
         `http://localhost:5123/api/bien/${formData.idBien}`,
@@ -24,6 +62,7 @@ const Administrador = ({ usuario }) => {
           body: JSON.stringify(formData),
         }
       );
+      console.log("Edición exitosa:", response);
 
       if (!response.ok) {
         throw new Error("Error en la solicitud de edición");

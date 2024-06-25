@@ -8,6 +8,7 @@ const AutomovilEdit = ({
   type,
   typeAlta,
 }) => {
+  console.log(item);
   // Estado local para los datos del formulario
   const [formData, setFormData] = useState({
     marca: item?.marca || "",
@@ -17,7 +18,7 @@ const AutomovilEdit = ({
     cuotas_pagadas: item?.cuotas_pagadas || "",
     cuotas_por_pagar: item?.cuotas_por_pagar || "",
     propietarios: item?.propietarios || [],
-    idBien: item?.idBien || "",
+    idBien: item?.idbien || "",
   });
 
   const [propietarios, setPropietarios] = useState(formData?.propietarios);
@@ -81,7 +82,7 @@ const AutomovilEdit = ({
   }, []);
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg bg-gray-400">
+    <div className="p-6 text-gray-700 bg-white rounded-lg shadow-lg bg-gray-400">
       <h2 className="text-2xl font-bold mb-4">Editar Automóvil</h2>
       <form
         onSubmit={
@@ -104,7 +105,7 @@ const AutomovilEdit = ({
             required
             type="text"
             name="marca"
-            value={item.marca}
+            value={formData.marca}
             onChange={handleInputChange}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
@@ -117,7 +118,7 @@ const AutomovilEdit = ({
             required
             type="text"
             name="modelo"
-            value={item.modelo}
+            value={formData.modelo}
             onChange={handleInputChange}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
@@ -130,7 +131,7 @@ const AutomovilEdit = ({
             required
             type="number"
             name="anio"
-            value={item.anio}
+            value={formData.anio}
             onChange={handleInputChange}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
@@ -143,41 +144,12 @@ const AutomovilEdit = ({
             required
             type="text"
             name="patente"
-            value={item.patente}
+            value={formData.patente}
             onChange={handleInputChange}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
-        {type !== "alta" ? (
-          <div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Cuotas Pagadas:
-              </label>
-              <input
-                required
-                type="number"
-                name="cuotas_pagadas"
-                value={item.cuotas_pagadas}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Cuotas por Pagar:
-              </label>
-              <input
-                required
-                type="number"
-                name="cuotas_por_pagar"
-                value={item.cuotas_por_pagar}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-              />
-            </div>
-          </div>
-        ) : null}
+
         <div>
           <label
             htmlFor="propietarios"

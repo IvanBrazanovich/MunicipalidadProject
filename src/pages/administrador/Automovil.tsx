@@ -1,7 +1,7 @@
 import React from "react";
 // import { fetchPropietarios } from "../utils/libdb";
 
-const Automovil = ({ automovil, setModalState }) => {
+const Automovil = ({ automovil, setModalState, handleDarDeBaja }) => {
   return (
     <li className="border p-4 mb-4 rounded-md bg-gray-800 text-white">
       <p className="mb-2">

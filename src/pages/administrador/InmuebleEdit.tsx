@@ -79,9 +79,8 @@ const InmuebleEdit = ({
     fetchPropietarios();
   }, []);
 
-  console.log(type);
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg bg-gray-400">
+    <div className="p-6 bg-white rounded-lg shadow-lg bg-gray-400  text-gray-700">
       <h2 className="text-2xl font-bold mb-4">Editar Inmueble</h2>
       <form
         onSubmit={
@@ -97,16 +96,14 @@ const InmuebleEdit = ({
         className="space-y-4"
       >
         <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Dirección:
-          </label>
+          <label className="block text-sm font-medium  ">Dirección:</label>
           <input
             required
             type="text"
             name="direccion"
             value={formData.direccion}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
+            className="mt-1 block w-full  rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
         <div>
@@ -148,36 +145,6 @@ const InmuebleEdit = ({
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>{" "}
-        {type !== "alta" ? (
-          <div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Cuotas Pagadas:
-              </label>
-              <input
-                required
-                type="number"
-                name="cuotas"
-                value={formData.cuotas}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Cuotas por Pagar:
-              </label>
-              <input
-                required
-                type="number"
-                name="pagosHechos"
-                value={formData.pagosHechos}
-                onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
-              />
-            </div>
-          </div>
-        ) : null}
         <div>
           <label
             htmlFor="propietarios"
