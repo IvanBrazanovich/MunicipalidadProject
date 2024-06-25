@@ -3,28 +3,30 @@ import React from "react";
 
 const Inmueble = ({ inmueble, setModalState }) => {
   return (
-    <li className="border p-4 mb-4 rounded-md">
+    <li className="border p-4 mb-4 rounded-md bg-gray-800 text-white">
       <p className="mb-2">
-        <span className="font-bold">Dirección:</span> {inmueble.direccion}
+        <span className="font-bold text-blue-500">Dirección:</span>{" "}
+        {inmueble.direccion}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Superficie:</span> {inmueble.superficie}
+        <span className="font-bold text-blue-500">Superficie:</span>{" "}
+        {inmueble.superficie}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Nomenclatura Catastral:</span>{" "}
+        <span className="font-bold text-blue-500">Nomenclatura Catastral:</span>{" "}
         {inmueble.nomenclatura_Catastral}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Cuotas Pagadas:</span>{" "}
+        <span className="font-bold text-blue-500">Cuotas Pagadas:</span>{" "}
         {inmueble.pagosHechos.$values.length}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Cuotas por Pagar:</span>{" "}
+        <span className="font-bold text-blue-500">Cuotas por Pagar:</span>{" "}
         {inmueble.cuotas.$values.length - inmueble.pagosHechos.$values.length}
       </p>
 
       <p className="mb-2">
-        <span className="font-bold">Propietarios:</span>{" "}
+        <span className="font-bold text-blue-500">Propietarios:</span>{" "}
         {inmueble.propietarios.$values.map((propietario) => (
           <span
             key={propietario.$id}
@@ -42,7 +44,7 @@ const Inmueble = ({ inmueble, setModalState }) => {
             item: inmueble,
           })
         }
-        className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300"
       >
         Editar
       </button>

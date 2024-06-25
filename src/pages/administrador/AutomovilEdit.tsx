@@ -81,7 +81,7 @@ const AutomovilEdit = ({
   }, []);
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg">
+    <div className="p-6 bg-white rounded-lg shadow-lg bg-gray-400">
       <h2 className="text-2xl font-bold mb-4">Editar Automóvil</h2>
       <form
         onSubmit={
@@ -94,7 +94,7 @@ const AutomovilEdit = ({
                 })
             : (e) => handleSubmit(e, formData)
         }
-        className="space-y-4"
+        className="space-y-4  "
       >
         <div>
           <label className="block text-sm font-medium text-gray-700">
@@ -106,7 +106,7 @@ const AutomovilEdit = ({
             name="marca"
             value={item.marca}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
         <div>
@@ -119,7 +119,7 @@ const AutomovilEdit = ({
             name="modelo"
             value={item.modelo}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
         <div>
@@ -132,7 +132,7 @@ const AutomovilEdit = ({
             name="anio"
             value={item.anio}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
         <div>
@@ -145,7 +145,7 @@ const AutomovilEdit = ({
             name="patente"
             value={item.patente}
             onChange={handleInputChange}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
           />
         </div>
         {type !== "alta" ? (
@@ -160,7 +160,7 @@ const AutomovilEdit = ({
                 name="cuotas_pagadas"
                 value={item.cuotas_pagadas}
                 onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
               />
             </div>
             <div>
@@ -173,7 +173,7 @@ const AutomovilEdit = ({
                 name="cuotas_por_pagar"
                 value={item.cuotas_por_pagar}
                 onChange={handleInputChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2"
               />
             </div>
           </div>
@@ -198,7 +198,7 @@ const AutomovilEdit = ({
                     </p>
                     <p className="text-sm text-gray-600">
                       <b className="semibold text-sm">ID:</b>{" "}
-                      <span className="bg-blue bold-100 text-blue-800 rounded px-2 py-1">
+                      <span className="bg-blue-100 text-blue-800 rounded px-2 py-1">
                         {propietario.idPropietario}
                       </span>
                     </p>
@@ -221,13 +221,16 @@ const AutomovilEdit = ({
             <select
               name="propietario"
               onChange={handleAgregarPropietario}
-              className="w-1/2 block focus:ring-blue-500 p-3  focus:border-blue-500 sm:text-sm border-gray-300 rounded-md"
+              className="w-1/2 block bg-gray-500 focus:ring-blue-500 p-3 focus:border-blue-500 sm:text-sm border-gray-300 rounded-md"
             >
-              <option value="">Selecciona un propietario</option>
+              <option value="" className="bg-white text-gray-800">
+                Selecciona un propietario
+              </option>
               {totalPropietarios?.$values?.map((propietario) => (
                 <option
                   key={propietario.idPropietario}
                   value={propietario.idPropietario}
+                  className="bg-white text-gray-800"
                 >
                   {propietario.apeyNombre}
                 </option>

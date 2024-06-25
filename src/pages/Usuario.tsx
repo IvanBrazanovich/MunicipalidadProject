@@ -9,9 +9,9 @@ const Usuario = ({ usuario }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-md">
-        <div className="container mx-auto px-4 flex justify-between items-center py-4">
+    <div className="min-h-screen bg-gray-800 text-white">
+      <header className="bg-gray-900 text-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-3xl font-bold">Usuario Municipal</h1>
           <div className="flex items-center space-x-6">
             <span className="text-lg font-medium">
@@ -31,10 +31,24 @@ const Usuario = ({ usuario }) => {
       </header>
       <main className="container mx-auto px-4 py-8 flex">
         <div className="w-1/2 pr-4">
-          <InmuebleList />
+          <section className="bg-gray-700 rounded-lg shadow-md p-4">
+            <h2 className="text-lg font-semibold text-blue-500 mb-4">
+              Inmuebles
+            </h2>
+            <div className="divide-y divide-gray-600">
+              <InmuebleList />
+            </div>
+          </section>
         </div>
         <div className="w-1/2 pl-4">
-          <AutomovilList />
+          <section className="bg-gray-700 rounded-lg shadow-md p-4">
+            <h2 className="text-lg font-semibold text-blue-500 mb-4">
+              Automóviles
+            </h2>
+            <div className="divide-y divide-gray-600">
+              <AutomovilList />
+            </div>
+          </section>
         </div>
       </main>
     </div>

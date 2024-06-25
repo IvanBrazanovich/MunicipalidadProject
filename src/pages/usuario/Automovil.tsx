@@ -69,32 +69,35 @@ const Automovil = ({ automovil }) => {
   };
 
   return (
-    <li className="border p-4 mb-4 rounded-md">
+    <li className="border p-4 mb-4 rounded-md bg-gray-800 text-white">
       <p className="mb-2">
-        <span className="font-bold">Marca:</span> {automovil.marca}
+        <span className="font-bold text-blue-500">Marca:</span>{" "}
+        {automovil.marca}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Modelo:</span> {automovil.modelo}
+        <span className="font-bold text-blue-500">Modelo:</span>{" "}
+        {automovil.modelo}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Año:</span> {automovil.anio}
+        <span className="font-bold text-blue-500">Año:</span> {automovil.anio}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Patente:</span> {automovil.patente}
+        <span className="font-bold text-blue-500">Patente:</span>{" "}
+        {automovil.patente}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Cuotas Pagadas:</span>{" "}
+        <span className="font-bold text-blue-500">Cuotas Pagadas:</span>{" "}
         {automovil.pagosHechos.$values.length}
       </p>
       <p className="mb-2">
-        <span className="font-bold">Cuotas por Pagar:</span>{" "}
+        <span className="font-bold text-blue-500">Cuotas por Pagar:</span>{" "}
         {automovil.cuotas.$values.length - automovil.pagosHechos.$values.length}
       </p>
 
       {cuotasRestantes > 0 ? (
         <button
           onClick={(e) => handlePago(e, automovil)}
-          className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300"
         >
           Pagar
         </button>

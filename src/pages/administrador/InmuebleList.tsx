@@ -39,7 +39,9 @@ const InmuebleList = ({ setModalState }) => {
 
   return (
     <div className="my-8">
-      <h2 className="text-2xl font-bold mb-4">Listado de Inmuebles</h2>
+      <h2 className="text-2xl font-bold mb-4 text-white">
+        Listado de Inmuebles
+      </h2>
       <ul>
         {inmuebles.map((inmueble, index) => (
           <Inmueble
